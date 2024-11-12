@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar Javascript</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <nav class="flex items-center justify-center h-[60px] bg-black w-screen">
+        <ul class="flex items-center gap-9 text-white">
+            <li class="transform hover:-translate-y-1 transition ease-in-out duration-300 cursor-pointer"><a
+                    href="#home" title="home"></a>Home</li>
+            <li class="transform hover:-translate-y-1 transition ease-in-out duration-300 cursor-pointer"><a
+                    href="#about" title="about"></a>About</li>
+            <li class="transform hover:-translate-y-1 transition ease-in-out duration-300 cursor-pointer"><a
+                    href="#contact" title="contact"></a>Contact</li>
+            <li><button title="login"
+                    class="border border-white py-2 px-5 rounded-[12px] transform hover:-translate-y-1 transition ease-in-out duration-300">Logan</button>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <section class="flex justify-center py-[60px]">
+            <form action="" id="myForm" class="flex flex-col border border-gray-400 p-10 rounded-[20px]">
+                <div class="flex flex-col">
+                    <label for="username">Username :</label>
+                    <input placeholder="username" type="text" id="username" name="username"
+                        class="border border-gray-400 rounded-[8px] px-[10px] h-[30px]" required>
+                </div>
+                <div class="mt-[10px] flex flex-col">
+                    <label for="email">Email :</label>
+                    <input placeholder="email" type="email" id="email" name="email"
+                        class="border border-gray-400 rounded-[8px] px-[10px] h-[30px]" required>
+                </div>
+                <div class="mt-[10px] flex flex-col">
+                    <label for="password">Password :</label>
+                    <input placeholder="password" type="password" id="password" name="password"
+                        class="border border-gray-400 rounded-[8px] px-[10px] h-[30px]" required>
+                </div>
+                <button type="submit" title="submit" id="submitBtn"
+                    class="border border-gray-400 mt-[20px] rounded-[12px] transform hover:-translate-y-1 transition ease-in-out duration-300 h-[35px]">Submit</button>
+            </form>
+        </section>
+    </main>
+
+</body>
+<script>
+    const form = document.getElementById("myForm");
+
+    form.addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        const username = document.getElementById("username").value;
+        const email = document.getElementById("email").value;
+        const password = document.getElementById("password").value;
+
+        alert("username : " + username + "\n email : " + email + "\n password : " + password);
+    })
+
+</script>
+
+</html>
